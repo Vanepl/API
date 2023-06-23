@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <div class="header">
+        <h1>Antecedentes y Multas</h1>
+      </div>
+
+        <main>
+
+            <div class="contenedor__todo">
+                <div class="caja__trasera">
+                    <div class="caja__trasera-login">
+                        <h3>¿Tienes antecedentes?</h3>
+                        <p>Ingresa aqui para conocer si tienes antecedentes de:</p>
+                        <ul>
+                            <ol>SIRI</ol>
+                            <ol>Responsabilidad fiscal</ol>
+                        </ul>
+                        <button id="btn__iniciar-sesion">Consultar</button>
+                    </div>
+                    <div class="caja__trasera-register">
+                        <h3>¿Quieres saber si tienes multas?</h3>
+                        <p>Ingresa aqui para conocerlas</p>
+                        <button id="btn__registrarse">MULTAS</button>
+                    </div>
+                </div>
+
+                <!--Formulario de antecedentes y multas-->
+                <div class="contenedor__login-register">
+                    <!--Antecedentes-->
+                    <form method="POST" action="api.php" class="formulario__login">
+                        <h2>Antecedentes de SIRI y/o responsabilidad fiscal</h2>
+                        <label for="numero_identificacion">Número de identificación:</label>
+                        <select name="tipo_identificacion">
+                            <option value="CÉDULA DE CIUDADANÍA">CÉDULA DE CIUDADANÍA</option>
+                            <option value="CÉDULA EXTRANJERÍA">CÉDULA EXTRANJERÍA</option>
+                        </select>
+                        <input type="text" id="numero_identificacion" name="numero_identificacion" required>
+                        <button type="submit">Enviar</button>
+                    </form>
+
+                    <!--Multas-->
+                    <form method="POST" action="api1.php" class="formulario__register">
+                        <h2>Multas</h2>
+                        <label for="placa">Placa:</label>
+                        <input type="text" id="placa" name="placa" required>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </div>
+
+        </main>
+
+        <div class="footer">
+            <p>Autores:</p>
+            <p>Vanessa Pabuena - Anthony Gutierres - Noberto Vergara - Marlon Florez</p>
+            <p>&copy; <?php echo date("Y"); ?> - Todos los derechos reservados.</p>
+          </div>
+
+        <script src="script.js"></script>
+</body>
+</html>
